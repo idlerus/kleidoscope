@@ -10,7 +10,7 @@
         width: 100%;
         height: 100%;
         position: absolute;
-        //filter: blur(5px);
+      //filter: blur(5px);
     }
 
     #logo {
@@ -92,7 +92,7 @@
             let r = Math.floor(Math.random() * (255));
             let g = Math.floor(Math.random() * (255));
             let b = Math.floor(Math.random() * (255));
-            let rad = Math.floor(Math.random() * (100 - 25)) + 25;
+            let rad = Math.floor(Math.random() * (500 - 450)) + 450;
             bodies.push(new kleidoscope(canvas, 100, mouse, {red: r, green: g, blue: b, radius: rad, opacity: 1}));
         }
 
@@ -194,33 +194,34 @@
           let theta1 = (60+this.rotation) * Math.PI / 180;
           let theta2 = (120+this.rotation) * Math.PI / 180;
           let theta3 = (180+this.rotation) * Math.PI / 180;
-          let theta4 = (240+this.rotation) * Math.PI / 180;
-          let theta5 = (300+this.rotation) * Math.PI / 180;
-          let theta6 = (360+this.rotation) * Math.PI / 180;
+         // let theta4 = (240+this.rotation) * Math.PI / 180;
+         // let theta5 = (300+this.rotation) * Math.PI / 180;
+         // let theta6 = (360+this.rotation) * Math.PI / 180;
           let radius = this.config.radius * (1 - this.lifeSpan/this.lifeExpectancy);
           this.context.moveTo(x + radius * Math.cos(theta1), y + radius * Math.sin(theta1));
           this.context.lineTo(x + radius * Math.cos(theta2), y + radius * Math.sin(theta2));
           this.context.lineTo(x + radius * Math.cos(theta3), y + radius * Math.sin(theta3));
-          this.context.lineTo(x + radius * Math.cos(theta4), y + radius * Math.sin(theta4));
-          this.context.lineTo(x + radius * Math.cos(theta5), y + radius * Math.sin(theta5));
-          this.context.lineTo(x + radius * Math.cos(theta6), y + radius * Math.sin(theta6));
+         // this.context.lineTo(x + radius * Math.cos(theta4), y + radius * Math.sin(theta4));
+         // this.context.lineTo(x + radius * Math.cos(theta5), y + radius * Math.sin(theta5));
+         // this.context.lineTo(x + radius * Math.cos(theta6), y + radius * Math.sin(theta6));
           this.context.closePath();
           this.context.stroke();
 
           theta1 = (60-this.rotation) * Math.PI / 180;
           theta2 = (120-this.rotation) * Math.PI / 180;
           theta3 = (180-this.rotation) * Math.PI / 180;
-          theta4 = (240-this.rotation) * Math.PI / 180;
-          theta5 = (300-this.rotation) * Math.PI / 180;
-          theta6 = (360-this.rotation) * Math.PI / 180;
+
+          // theta4 = (240-this.rotation) * Math.PI / 180;
+         //  theta5 = (300-this.rotation) * Math.PI / 180;
+         // theta6 = (360-this.rotation) * Math.PI / 180;
 
 
           this.context.moveTo(x + (radius/2) * Math.cos(theta1), y + (radius/2) * Math.sin(theta1));
           this.context.lineTo(x + (radius/2) * Math.cos(theta2), y + (radius/2) * Math.sin(theta2));
           this.context.lineTo(x + (radius/2) * Math.cos(theta3), y + (radius/2) * Math.sin(theta3));
-          this.context.lineTo(x + (radius/2) * Math.cos(theta4), y + (radius/2) * Math.sin(theta4));
-          this.context.lineTo(x + (radius/2) * Math.cos(theta5), y + (radius/2) * Math.sin(theta5));
-          this.context.lineTo(x + (radius/2) * Math.cos(theta6), y + (radius/2) * Math.sin(theta6));
+         // this.context.lineTo(x + (radius/2) * Math.cos(theta4), y + (radius/2) * Math.sin(theta4));
+         // this.context.lineTo(x + (radius/2) * Math.cos(theta5), y + (radius/2) * Math.sin(theta5));
+         // this.context.lineTo(x + (radius/2) * Math.cos(theta6), y + (radius/2) * Math.sin(theta6));
           this.context.closePath();
           this.context.stroke();
 

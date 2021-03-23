@@ -54,8 +54,8 @@ class kleidoscope extends body
     draw()
     {
         this.context.beginPath();
-        let x = parseFloat(this.mousePos.x + this.speed * (Math.cos(this.direction))) * (this.lifeSpan/this.lifeExpectancy);
-        let y = parseFloat(this.mousePos.y + this.speed * (Math.sin(this.direction))) * (this.lifeSpan/this.lifeExpectancy);
+        let x = parseFloat(this.mousePos.x + this.speed * (Math.cos(this.direction))) + (100*(this.lifeSpan/this.lifeExpectancy));
+        let y = parseFloat(this.mousePos.y + this.speed * (Math.sin(this.direction))) + (100*(this.lifeSpan/this.lifeExpectancy));
         this.context.lineWidth = 3;
         this.context.strokeStyle = 'rgba(' + this.config.red + ', ' + this.config.green + ', ' + this.config.blue + ', ' + (this.config.opacity * this.lifeSpan/this.lifeExpectancy) + ')';
 

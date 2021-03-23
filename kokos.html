@@ -1,4 +1,8 @@
 <head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Train+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
   <style>
     body {
         margin: 0;
@@ -24,7 +28,7 @@
 
     #logo span {
         color: #d0d0d0;
-        font-family: 'Orbitron', sans-serif;
+        font-family: 'Bebas Neue', cursive;
         font-size: 128pt;
     }
 
@@ -91,8 +95,9 @@
       let r = Math.floor(Math.random() * (255));
       let g = Math.floor(Math.random() * (255));
       let b = Math.floor(Math.random() * (255));
+
       let rad = Math.floor(Math.random() * (100 - 25)) + 25;
-      bodies.push(new kleidoscope(canvas, 100, mouse, {red: r, green: g, blue: b, radius: rad, opacity: 1, sides: 5}));
+      bodies.push(new kleidoscope(canvas, 100, mouse, {red: r, green: g, blue: b, radius: rad, opacity: 1, sides: 3}));
     }
 
     for(let i in bodies)
